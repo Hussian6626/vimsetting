@@ -1,31 +1,19 @@
 " Vim syntax file
-" Language:	Spice circuit simulator input netlist
-" Maintainer:	Hussian
+" Language:     Spice circuit simulator input netlist
+" Maintainer:   Hussian
 "
 " This is based on https://github.com/ftorres16/spice.vim
-" also https://github.com/leoheck/sublime-spice
-
-
-" save all options
-
-"" FINISHED
-" TODO incline // comment
-" TODO include + section
-" TODO if-else
-" TODO unmatched }
-" TODO parameter different color
-" TODO simulator lang = 
-" TODO simOptions/sweepvds/sweepvgs and so on
-
+" also https://github.com/leoheck/sublime-spice and
+" https://github.com/lxTHU/vscode-spice
 
 if exists("b:current_syntax")
-	finish
+    finish
 endif
 
 " spice syntax is case INsensitive
 syn case ignore
 
-syn keyword	spiceTodo	contained TODO
+syn keyword spiceTodo contained TODO
 
 " syn match spiceComment  "\*.*$" contains=@Spell,spiceTodo
 syn match spiceComment  "\/\/.*$" contains=@Spell,spiceTodo
@@ -223,35 +211,35 @@ syn sync minlines=50
 
 
 " Highlights
-highlight link spiceWrapLineOperator	spiceOperator
-highlight link spiceSinglequote	        spiceExpr
+highlight link spiceWrapLineOperator    spiceOperator
+highlight link spiceSinglequote         spiceExpr
 
-highlight link spiceCkt	                spiceExpr
+highlight link spiceCkt                 spiceExpr
 highlight link spiceInclude             String
-highlight link spiceType             	spiceAnal
-highlight link spiceEng             	spiceAnal
+highlight link spiceType                spiceAnal
+highlight link spiceEng                 spiceAnal
 
-highlight link spiceAnal	        	Keyword		
-highlight link spiceComment		        Comment
+highlight link spiceAnal                Keyword        
+highlight link spiceComment             Comment
 
-highlight link spiceConditional		    Conditional
+highlight link spiceConditional         Conditional
 
-highlight link spiceElement		        Define
-highlight link spiceExpr		        Function
-highlight link spiceFunc		        Function
-highlight link spiceLibManagement	    Define
-highlight link spiceModel		        Structure
-highlight link spiceModelType		    Type
-highlight link spiceNumber		        Number
-highlight link spiceOperator		    Operator
-highlight link spiceOutput		        Statement
-highlight link spiceSetUp		        Define
-highlight link spiceSubCkt		        Structure
-highlight link spiceStatement		    Statement
-highlight link spiceString		        String
-highlight link spiceTodo		        Todo
-highlight link spiceParenError		    Error
-highlight link spiceCurlyError		    Error
+highlight link spiceElement             Define
+highlight link spiceExpr                Function
+highlight link spiceFunc                Function
+highlight link spiceLibManagement       Define
+highlight link spiceModel               Structure
+highlight link spiceModelType           Type
+highlight link spiceNumber              Number
+highlight link spiceOperator            Operator
+highlight link spiceOutput              Statement
+highlight link spiceSetUp               Define
+highlight link spiceSubCkt              Structure
+highlight link spiceStatement           Statement
+highlight link spiceString              String
+highlight link spiceTodo                Todo
+highlight link spiceParenError          Error
+highlight link spiceCurlyError          Error
 
 
 let b:current_syntax = "spice"
